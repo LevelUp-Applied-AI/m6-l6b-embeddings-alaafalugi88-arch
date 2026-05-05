@@ -31,7 +31,7 @@ def build_tfidf(texts):
         strip_accents="unicode",
         lowercase=True,
         stop_words="english",
-        min_df=2,           # ignore very rare terms
+        min_df=1,           # keep all terms so no document becomes a zero vector
         max_df=0.95,        # ignore near-universal terms
         sublinear_tf=True,  # apply log(1 + tf) instead of raw tf
     )
